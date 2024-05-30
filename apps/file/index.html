@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>分片上传</title>
+    <script src="https://cdn.bootcdn.net/ajax/libs/spark-md5/3.0.2/spark-md5.min.js"></script>
+  </head>
+  <body>
+    分片上传
+
+    <form enctype="multipart/form-data">
+      <input type="file" name="fileInput" id="fileInput" />
+      <input type="button" value="计算文件MD5" onclick="calculateFileMD5()" />
+      <input type="button" value="上传" onclick="uploadFile()" />
+      <input type="button" value="检测文件完整性" onclick="checkFile()" />
+    </form>
+
+    <p>
+      文件MD5:
+      <span id="fileMd5"></span>
+    </p>
+    <p>
+      上传结果:
+      <span id="uploadResult"></span>
+    </p>
+    <p>
+      检测文件完整性:
+      <span id="checkFileRes"></span>
+    </p>
+<script src="index.js"></script>
+   
+  </body>
+</html>
