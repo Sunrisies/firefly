@@ -1,2 +1,3 @@
-import { getContentDimensions, preloadAndCacheImages, conversionTime, genRandStr } from './utils/index';
-export { getContentDimensions, preloadAndCacheImages, conversionTime, genRandStr };
+import { getContentDimensions, preloadAndCacheImages, conversionTime, genRandStr, preloadAndCacheImage } from './utils/index';
+import { TimeUpdater } from './utils/timer';
+export { getContentDimensions, preloadAndCacheImages, conversionTime, genRandStr, TimeUpdater, preloadAndCacheImage };

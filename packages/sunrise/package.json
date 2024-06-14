@@ -1,6 +1,6 @@
 {
   "name": "sunrise-utils",
-  "version": "1.0.7",
+  "version": "1.0.15",
   "description": "一个使用esbuild进行本地开发，使用Rollup打包的库, 包含了一些常用的工具函数，主要是使用在浏览器环境",
   "main": "dist/index.esm.js",
   "module": "dist/index.esm.js",
@@ -23,7 +23,8 @@
   },
   "publishConfig": {
     "access": "public",
-    "registry": "https://registry.npmjs.org/"
+      "registry": "http://localhost:4873/"
+
   },
   "repository": {
     "directory": "packages/sunrise",

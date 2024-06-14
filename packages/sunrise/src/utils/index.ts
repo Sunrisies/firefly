@@ -49,6 +49,19 @@ export const preloadAndCacheImages = (imageUrls: string[]): Promise<HTMLImageEle
   )
 }
 /**
+ * 预加载并缓存图片资源。
+ * @param imageUrl 图片资源的URL
+ * @returns 返回一个Promise，该Promise在图片加载完成后解析为一个包含HTMLImageElement对象
+ */
+export const preloadAndCacheImage = (imageUrl: string) => {
+    const img = new Image();
+  img.onload = () => img;
+  console.log(img,'=1==1=1=1=1=1=');
+    img.src = imageUrl;
+};
+
+
+/**
  * 时间戳转换为日期字符串。
  * @param time 时间戳
  * @returns 返回日期字符串

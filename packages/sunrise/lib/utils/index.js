@@ -32,6 +32,12 @@ export const preloadAndCacheImages = (imageUrls) => {
         image.src = url;
     })));
 };
+export const preloadAndCacheImage = (imageUrl) => {
+    const img = new Image();
+    img.onload = () => img;
+    console.log(img, '=1==1=1=1=1=1=');
+    img.src = imageUrl;
+};
 export const conversionTime = (time) => {
     const date = new Date(time * 1000);
     const year = date.getFullYear();
