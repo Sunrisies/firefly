@@ -1,6 +1,6 @@
 {
   "name": "sunrise-utils",
-  "version": "1.0.15",
+  "version": "1.0.16",
   "description": "一个使用esbuild进行本地开发，使用Rollup打包的库, 包含了一些常用的工具函数，主要是使用在浏览器环境",
   "main": "dist/index.esm.js",
   "module": "dist/index.esm.js",
@@ -20,11 +20,6 @@
     "docs:build": "vitepress build docs",
     "docs:preview": "vitepress preview docs",
     "docs:push": "scp -r C:\\Users\\hover\\Desktop\\test\\npm\\npm-cli\\packages\\sunrise\\docs\\.vitepress\\dist root@47.111.168.59:/home/npm"
-  },
-  "publishConfig": {
-    "access": "public",
-      "registry": "http://localhost:4873/"
-
   },
   "repository": {
     "directory": "packages/sunrise",
