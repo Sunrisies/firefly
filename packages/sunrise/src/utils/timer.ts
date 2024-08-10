@@ -111,7 +111,7 @@ export class TimeUpdater {
  * @class Timer
  */
 class Timer {
-  private intervalId: NodeJS.Timeout | null | number = null
+  private intervalId: number | null = null
 
   /**
    * 开始定时触发回调。
