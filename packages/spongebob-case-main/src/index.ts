@@ -5,8 +5,6 @@ export function toSpongebobCase(str: string): string {
   return str.split('').reduce((acc, currChar): string => {
     // check if currChar is a word character
     if (singleCharacter.test(currChar)) {
-      // fall back to array of empty string b/c for first character, lastMatch is undefined
-      // lowerCaseLetters.test(undefined) returns true, but passing in an empty string returns false (which is what we want for the first character)
       const existingWordChars = acc.match(/[a-zA-Z]/g) ?? [''];
       const lastMatch = existingWordChars[existingWordChars.length - 1];
 
@@ -18,5 +16,13 @@ export function toSpongebobCase(str: string): string {
   }, '');
 }
 
-import { TimeUpdater, upTimeType } from './utils/timer'
-export { TimeUpdater, upTimeType }
+// import { TimeUpdater, upTimeType } from './utils/timer'
+// export { TimeUpdater, upTimeType }
+
+export const add = (a: number, b: number): number => a + b;
+
+export const subtract = (a: number, b: number): number => a - b;
+
+export const multiply = (a: number, b: number): number => a * b;
+
+export const divide = (a: number, b: number): number => a / b;
