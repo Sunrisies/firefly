@@ -2,4 +2,4 @@ import { getContentDimensions, preloadAndCacheImages, conversionTime, genRandStr
 import { TimeUpdater, upTimeType } from './utils/timer'
 import {distanceLngLat} from './utils/map'
 export { getContentDimensions, preloadAndCacheImages, conversionTime, genRandStr, TimeUpdater, preloadAndCacheImage,distanceLngLat }
-export type {upTimeType} from './utils/timer'
+export type { upTimeType } from './utils/timer'

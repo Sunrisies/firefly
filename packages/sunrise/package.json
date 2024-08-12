@@ -1,10 +1,10 @@
 {
   "name": "sunrise-utils",
-  "version": "1.0.16",
+  "version": "1.0.11",
   "description": "一个使用esbuild进行本地开发，使用Rollup打包的库, 包含了一些常用的工具函数，主要是使用在浏览器环境",
   "main": "dist/index.esm.js",
   "module": "dist/index.esm.js",
-  "types": "dist/sunrise-utils.d.ts",
+  "types": "dist/index.d.ts",
   "files": [
     "dist/**",
     "README.md"
@@ -15,6 +15,7 @@
     "build:dev": "cross-env NODE_ENV=development rollup -c",
     "build:prod": "cross-env NODE_ENV=production rollup -c",
     "start:dev": "tsc -w && npm run test && node esbuild-build.js",
+    "tests": "node esbuild-build.js && node index.js",
     "test": "api-extractor run -c api-extractor.json",
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
@@ -37,6 +38,7 @@
   "license": "MIT",
   "dependencies": {
     "esbuild-plugin-d.ts": "^1.3.0",
+    "npm-dts": "^1.3.11",
     "typescript": "^5.4.5"
   },
   "devDependencies": {
@@ -48,6 +50,7 @@
     "@rollup/plugin-node-resolve": "^15.2.3",
     "@types/inquirer": "^9.0.7",
     "cross-env": "^7.0.3",
+    "cross-spawn": "^7.0.3",
     "esbuild": "^0.20.2",
     "rollup": "^4.13.0",
     "rollup-plugin-babel": "^4.4.0",

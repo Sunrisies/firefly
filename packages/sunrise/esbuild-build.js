@@ -11,9 +11,13 @@ const init = async () => {
     bundle: true,
     platform: 'browser', // 目标平台为浏览器
     loader: { '.ts': 'ts' },
+    minify: true,
+    keepNames: true,
     plugins: isProduction ? [minify(),dtsPlugin()] : [dtsPlugin()],
   })
-  await ctxEsm.watch()
+  await ctxEsm.watch().then(result => {
+    console.log(result)
+  })
 }
 init()
 
