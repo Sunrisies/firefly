@@ -5,7 +5,8 @@ import './App.css'
 function App() {
   const [count, setCount] = useState(0)
   useEffect(() => {
-    u.genRandStr(10)
+    const num = u.genRandStr(10)
+    console.log(num, 'num')
     // console.log(distanceLngLat(116.46, 39.92, 116.46, 39.91), 'ddddd')
     // console.log(add, 'de,p', conversionTime(1713196800))
     // console.log(getContentDimensions('title'), 'MyModule')

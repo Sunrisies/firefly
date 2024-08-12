@@ -14,10 +14,10 @@
     "dev:tsc": "tsc -w",
     "build:dev": "cross-env NODE_ENV=development rollup -c",
     "build:prod": "cross-env NODE_ENV=production rollup -c",
-    "start:dev": "tsc -w && npm run test && node esbuild-build.js",
+    "start:dev": "node esbuild-build.js",
     "tests": "node esbuild-build.js && node index.js",
     "test": "api-extractor run -c api-extractor.json",
-    "pretests":"npm run test",
+    "pretests": "npm run test",
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
     "docs:preview": "vitepress preview docs",
@@ -39,7 +39,6 @@
   "license": "MIT",
   "dependencies": {
     "esbuild-plugin-d.ts": "^1.3.0",
-    "npm-dts": "^1.3.11",
     "typescript": "^5.4.5"
   },
   "devDependencies": {
