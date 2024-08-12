@@ -7,26 +7,30 @@ const sharedConfig = {
   minify: true
 };
 
-build({
-  ...sharedConfig,
-  platform: 'node', // for CJS
-  outfile: "dist/index.js",
-});
+// build({
+//   ...sharedConfig,
+//   platform: 'node', // for CJS
+//   outfile: "dist/index.js",
+// });
 
-build({
-  ...sharedConfig,
+
+const d = build({
+  // ...sharedConfig,
+  entryPoints: ["src/index.ts"],
+  // bundle: true,
+  // minify: true,
   outfile: "dist/index.esm.js",
   platform: 'neutral', // for ESM
   format: "esm",
 });
 
 // for typings
-const d = new Generator({
-  entry: 'src/index.ts',
-  output: 'dist/index.d.ts',
-}).generate()
+// const ds = new Generator({
+//   entry: 'src/index.ts',
+//   output: 'dist/index.d.ts',
+// }).generate()
 d.then((e) => console.log(e,'typings generated'))
-new Generator({
-  entry: 'src/utils/timer.ts',
-  output: 'dist/timer.d.ts',
-}).generate()
+// new Generator({
+//   entry: 'src/utils/timer.ts',
+//   output: 'dist/timer.d.ts',
+// }).generate()

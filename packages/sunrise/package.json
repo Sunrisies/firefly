@@ -17,6 +17,7 @@
     "start:dev": "tsc -w && npm run test && node esbuild-build.js",
     "tests": "node esbuild-build.js && node index.js",
     "test": "api-extractor run -c api-extractor.json",
+    "pretests":"npm run test",
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
     "docs:preview": "vitepress preview docs",
